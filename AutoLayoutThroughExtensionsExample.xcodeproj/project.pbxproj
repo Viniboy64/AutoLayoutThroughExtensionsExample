@@ -11,6 +11,7 @@
 		4CBDE6AC233A8F97006AEB45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBDE6AB233A8F97006AEB45 /* Assets.xcassets */; };
 		4CBDE6AF233A8F97006AEB45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBDE6AD233A8F97006AEB45 /* LaunchScreen.storyboard */; };
 		4CBDE6BD233A9542006AEB45 /* HomeFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBDE6BC233A9542006AEB45 /* HomeFeedController.swift */; };
+		4CBDE6C2233A9B9F006AEB45 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBDE6C1233A9B9F006AEB45 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		4CBDE6AE233A8F97006AEB45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CBDE6B0233A8F97006AEB45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CBDE6BC233A9542006AEB45 /* HomeFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedController.swift; sourceTree = "<group>"; };
+		4CBDE6C1233A9B9F006AEB45 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,6 @@
 				4CBDE6B8233A92C6006AEB45 /* Resources */,
 				4CBDE6B9233A92D7006AEB45 /* Startup */,
 				4CBDE6BA233A92F3006AEB45 /* Supporting Files */,
-				4CBDE6BB233A9308006AEB45 /* Views */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -73,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				4CBDE6AB233A8F97006AEB45 /* Assets.xcassets */,
+				4CBDE6BE233A9B79006AEB45 /* Extensions */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -94,11 +96,12 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4CBDE6BB233A9308006AEB45 /* Views */ = {
+		4CBDE6BE233A9B79006AEB45 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4CBDE6C1233A9B9F006AEB45 /* UIView.swift */,
 			);
-			path = Views;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CBDE6BD233A9542006AEB45 /* HomeFeedController.swift in Sources */,
+				4CBDE6C2233A9B9F006AEB45 /* UIView.swift in Sources */,
 				4CBDE6A3233A8F92006AEB45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

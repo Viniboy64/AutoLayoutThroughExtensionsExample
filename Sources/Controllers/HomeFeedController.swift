@@ -37,7 +37,7 @@ class HomeFeedController: UIViewController {
                 redView.topAnchor.constraint(equalTo: view.topAnchor),
                 redView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
                 redView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                redView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                redView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             ]
         )
     }
