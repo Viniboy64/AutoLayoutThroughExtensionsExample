@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeFeedController.swift
 //  AutoLayoutThroughExtensionsExample
 //
 //  Created by Marcus Vinícius on 24/09/19.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class HomeFeedController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        navigationItem.title = "HOME"
+        
+        view.backgroundColor = .red
     }
-
-
 }
-
