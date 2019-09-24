@@ -10,23 +10,39 @@ import UIKit
 
 extension UIView {
     func anchor(
-        top: NSLayoutYAxisAnchor,
-        leading: NSLayoutXAxisAnchor,
-        bottom: NSLayoutYAxisAnchor,
-        trailing: NSLayoutXAxisAnchor,
-        padding: UIEdgeInsets = .zero
+        top: NSLayoutYAxisAnchor?,
+        leading: NSLayoutXAxisAnchor?,
+        bottom: NSLayoutYAxisAnchor?,
+        trailing: NSLayoutXAxisAnchor?,
+        padding: UIEdgeInsets = .zero,
+        size: CGSize = .zero
     ) {
         // This enables autolayout to class UIView.
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate(
-            [
-                self.topAnchor.constraint(equalTo: top, constant: padding.top),
-                self.leadingAnchor.constraint(equalTo: leading, constant: padding.left),
-                self.bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom),
-                self.trailingAnchor.constraint(equalTo: trailing, constant: -padding.right)
-            ]
-        )
+        if let topAnchor = top {
+            self.topAnchor.constraint(equalTo: topAnchor, constant: padding.top).isActive = true
+        }
+        
+        if let leadingAnchor = leading {
+            self.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding.left).isActive = true
+        }
+        
+        if let bottomAnchor = bottom {
+            self.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding.bottom).isActive = true
+        }
+        
+        if let trailingAnchor = trailing {
+            self.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding.right).isActive = true
+        }
+        
+        if size.width != 0 {
+            self.widthAnchor.constraint(equalToConstant: size.width).isActive = true
+        }
+        
+        if size.height != 0 {
+            self.heightAnchor.constraint(equalToConstant: size.height).isActive = true
+        }
     }
     
     func addSubviews(_ views: [UIView]) {

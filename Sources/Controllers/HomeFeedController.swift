@@ -19,6 +19,8 @@ class HomeFeedController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
         navigationItem.title = "HOME"
         
         setupLayout()
@@ -31,10 +33,11 @@ class HomeFeedController: UIViewController {
         // Constraints for redView.
         redView.anchor(
             top: view.safeAreaLayoutGuide.topAnchor,
-            leading: view.leadingAnchor,
-            bottom: view.bottomAnchor,
+            leading: nil,
+            bottom: nil,
             trailing: view.trailingAnchor,
-            padding: UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+            padding: UIEdgeInsets(top: 16.0, left: 0, bottom: 0, right: 16.0),
+            size: CGSize(width: 100.0, height: 100.0)
         )
     }
 }
