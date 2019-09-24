@@ -13,9 +13,6 @@ class HomeFeedController: UIViewController {
         let view = UIView()
         view.backgroundColor = .red
         
-        // This enables autolayout to view.
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
@@ -32,13 +29,6 @@ class HomeFeedController: UIViewController {
         view.addSubview(redView)
         
         // Constraints for redView.
-        NSLayoutConstraint.activate(
-            [
-                redView.topAnchor.constraint(equalTo: view.topAnchor),
-                redView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-                redView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                redView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-            ]
-        )
+        redView.anchor(top: view.topAnchor, bottom: view.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
     }
 }
