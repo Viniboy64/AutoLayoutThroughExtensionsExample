@@ -9,6 +9,21 @@
 import UIKit
 
 extension UIView {
+    public struct AnchoredConstraints {
+        var top: NSLayoutConstraint?
+        var leading: NSLayoutConstraint?
+        var bottom: NSLayoutConstraint?
+        var trailing: NSLayoutConstraint?
+        var width: NSLayoutConstraint?
+        var height: NSLayoutConstraint?
+    }
+    
+    public func addSubviews(_ views: [UIView]) {
+        views.forEach { (view) in
+            self.addSubview(view)
+        }
+    }
+    
     @discardableResult
     public func anchor(
         top: NSLayoutYAxisAnchor?,
@@ -57,11 +72,5 @@ extension UIView {
         ].forEach { $0?.isActive = true }
         
         return anchoredConstraints
-    }
-    
-    func addSubviews(_ views: [UIView]) {
-        views.forEach { (view) in
-            self.addSubview(view)
-        }
     }
 }
