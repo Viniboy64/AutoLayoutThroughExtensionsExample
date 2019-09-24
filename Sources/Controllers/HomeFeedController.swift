@@ -29,6 +29,12 @@ class HomeFeedController: UIViewController {
         view.addSubview(redView)
         
         // Constraints for redView.
-        redView.anchor(top: view.topAnchor, bottom: view.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
+        redView.anchor(
+            top: view.safeAreaLayoutGuide.topAnchor,
+            leading: view.leadingAnchor,
+            bottom: view.bottomAnchor,
+            trailing: view.trailingAnchor,
+            padding: UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+        )
     }
 }
