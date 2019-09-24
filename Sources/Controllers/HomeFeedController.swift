@@ -16,6 +16,20 @@ class HomeFeedController: UIViewController {
         return view
     }()
     
+    private let greenView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .green
+        
+        return view
+    }()
+    
+    private let blueView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .blue
+        
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,16 +42,36 @@ class HomeFeedController: UIViewController {
     
     private func setupLayout() {
         // Add subviews to view.
-        view.addSubview(redView)
+        view.addSubviews([redView, greenView, blueView])
         
         // Constraints for redView.
         redView.anchor(
             top: view.safeAreaLayoutGuide.topAnchor,
             leading: nil,
             bottom: nil,
-            trailing: view.trailingAnchor,
-            padding: UIEdgeInsets(top: 16.0, left: 0, bottom: 0, right: 16.0),
-            size: CGSize(width: 100.0, height: 100.0)
+            trailing: view.safeAreaLayoutGuide.trailingAnchor,
+            padding: UIEdgeInsets(top: 16.0, left: 0.0, bottom: 0.0, right: 16.0),
+            size: CGSize(width: 96.0, height: 96.0)
+        )
+        
+        // Constraints for greenView.
+        greenView.anchor(
+            top: redView.bottomAnchor,
+            leading: nil,
+            bottom: nil,
+            trailing: view.safeAreaLayoutGuide.trailingAnchor,
+            padding: UIEdgeInsets(top: 16.0, left: 0.0, bottom: 0.0, right: 16.0),
+            size: CGSize(width: 96.0, height: 96.0)
+        )
+        
+        // Constraints for blueView.
+        blueView.anchor(
+            top: greenView.bottomAnchor,
+            leading: nil,
+            bottom: nil,
+            trailing: view.safeAreaLayoutGuide.trailingAnchor,
+            padding: UIEdgeInsets(top: 16.0, left: 0.0, bottom: 0.0, right: 16.0),
+            size: CGSize(width: 96.0, height: 96.0)
         )
     }
 }
