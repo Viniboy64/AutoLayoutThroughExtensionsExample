@@ -66,6 +66,14 @@ class HomeFeedController: UIViewController {
         view.addSubviews([purpleView, redView, greenView, blueView, cyanView, orangeView])
         
         // Constraints for purpleView.
+//        purpleView.anchor(
+//            top: view.safeAreaLayoutGuide.topAnchor,
+//            leading: view.safeAreaLayoutGuide.leadingAnchor,
+//            bottom: nil,
+//            trailing: nil,
+//            padding: UIEdgeInsets(top: 12.0, left: 12.0, bottom: 0.0, right: 0.0),
+//            size: CGSize(width: 231.0, height: 231.0)
+//        )
         purpleView.anchor(
             top: view.safeAreaLayoutGuide.topAnchor,
             leading: view.safeAreaLayoutGuide.leadingAnchor,
