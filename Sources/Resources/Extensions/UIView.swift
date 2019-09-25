@@ -9,6 +9,11 @@
 import UIKit
 
 extension UIView {
+    convenience public init(backgroundColor: UIColor = .clear) {
+        self.init(frame: .zero)
+        self.backgroundColor = backgroundColor
+    }
+    
     public struct AnchoredConstraints {
         var top: NSLayoutConstraint?
         var leading: NSLayoutConstraint?
